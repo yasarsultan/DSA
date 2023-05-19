@@ -23,7 +23,7 @@ class linkedlist:
             print("List is empty.")
         else:
             current = self.head
-            while current:
+            while current.next:
                 if not current:
                     break
                 print(current.data)
