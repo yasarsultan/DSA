@@ -1,10 +1,18 @@
-def lsrch(items, find):
-  if items:
-    for item in range(len(items)):
-      if items[item] == find:
-        return f'Item found {items[item]} at index number {item}'
-  return 'No item was searched as the given list was empty'
+def search(values, value):
+    for index in range(len(values)):
+        if values[index] == value:
+            return f"{value} found at index {index} which is at position {index+1} in the given list."
+    return f"{value} not found in the given list."
 
-alist = [1, 2, 4, 5, 6, 0, 9, 8, 7]
-result = lsrch(alist, 0)
+items = []
+while True:
+    print("Enter an element to insert. \nPress !q to stop.")
+    element = input("Type the value and press Enter: ")
+    if element != '!q':
+        items.append(element)
+    else:
+        break
+value = input("\nEnter value that you want to search in list: ")
+
+result = search(items, value)
 print(result)
